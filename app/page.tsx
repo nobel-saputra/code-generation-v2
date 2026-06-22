@@ -13,7 +13,6 @@ import {
   Bug,
   ClipboardCheck,
   ShieldAlert,
-  Languages,
   Sparkles,
   Loader2,
   Copy,
@@ -96,6 +95,7 @@ const USECASES = [
   },
 ];
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const CodeBlock = ({ inline, className, children, ...props }: any) => {
   const match = /language-(\w+)/.exec(className || "");
   const [copied, setCopied] = useState(false);
@@ -285,7 +285,7 @@ export default function Home() {
 
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight">
             AI Code{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 via-fuchsia-400 to-indigo-400">
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-violet-400 via-fuchsia-400 to-indigo-400">
               Analyzer
             </span>
           </h1>
@@ -479,7 +479,7 @@ export default function Home() {
                     className="mt-6 overflow-hidden"
                   >
                     <div className="p-4 rounded-xl bg-red-500/10 border border-red-500/20 text-red-400 text-sm font-mono flex items-start">
-                      <div className="w-2 h-2 rounded-full bg-red-500 mt-1.5 mr-3 flex-shrink-0" />
+                      <div className="w-2 h-2 rounded-full bg-red-500 mt-1.5 mr-3 shrink-0" />
                       {error}
                     </div>
                   </motion.div>
@@ -495,7 +495,7 @@ export default function Home() {
                       <div className="flex items-center gap-3 text-xs font-mono">
                         <span className="flex items-center text-emerald-400/80">
                           <span className="w-2 h-2 rounded-full bg-emerald-500 mr-2 animate-pulse shadow-[0_0_8px_rgba(16,185,129,0.5)]" />
-                          // output generated
+                          {"// output generated"}
                         </span>
                         {responseTime !== null && (
                           <span className="flex items-center gap-1 text-slate-500">
