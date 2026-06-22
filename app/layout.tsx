@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "AI Code Generation — NLP Project",
-  description: "Asisten pemrograman berbasis AI untuk autocomplete, generate, refactor, unit test, dan dokumentasi kode.",
+  title: "AI Code Analyzer — NLP Project",
+  description: "Analisis, konversi, dan review kode menggunakan AI",
 };
 
 export default function RootLayout({
