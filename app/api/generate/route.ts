@@ -38,6 +38,13 @@ export async function POST(req: NextRequest) {
     }),
   });
 
+  if (!res.ok) {
+    return NextResponse.json(
+      { error: "API Error: " + res.statusText },
+      { status: res.status }
+    );
+  }
+
   const data = await res.json();
   const raw: string = data.choices?.[0]?.message?.content ?? "";
   const clean = raw.replace(/```[a-zA-Z0-9+-]*\n?|```/g, "").trim();
