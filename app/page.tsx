@@ -272,16 +272,7 @@ export default function Home() {
           animate={{ opacity: 1, y: 0 }}
           className="mb-10 flex flex-col items-center text-center"
         >
-          {/* Badge */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.05 }}
-            className="mb-4 inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-violet-500/10 border border-violet-500/20 text-violet-300 text-xs font-medium tracking-wide"
-          >
-            <Sparkles className="w-3.5 h-3.5" />
-            Studi Kasus Text Generation — Kasus 4
-          </motion.div>
+        
 
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight">
             AI Code{" "}
